@@ -14,6 +14,7 @@ int main(){
     int loginAttempts = 3;
     int loggedin = 0;
     int apprunning = 1;
+    int runninglogin = 1;
 
     while(apprunning){
 //---------------------mainscreen------------------------------
@@ -22,6 +23,9 @@ int main(){
         printf("\t\t#\t\t>>>>ATM MACHINE<<<<\t\t#\n");
         printf("\t\t#\t\t\t\t\t\t#");
         printf("\n\t\t#################################################\n");
+        printf("\n\t\t\t\t>>>WELCOME USER<<<\n");
+        printf("\n\t\tInsert your card>>>");
+        printf("\n\t\t>>Card Detected.");
         printf("\n\t\tProceed to login? Y/N");
         printf("\n\t\t[Y]Proceed");
         printf("\n\t\t[N]Exit\n");
@@ -227,7 +231,8 @@ int main(){
         }
         else if(letter == 'n'|| letter == 'N'){
             printf("\n\t\tExiting ATM Machine...\n");
-            printf("\t\tGoodbye.");
+            printf("\n\t\t>>PLEASE TAKE YOUR CARD<<\n");
+            printf("\t\tThank you.");
             return 0;
         }
         else{
