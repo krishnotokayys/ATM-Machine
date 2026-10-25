@@ -55,6 +55,7 @@ int main(){
                     }
                     else{
                         printf("\n\t\tToo many attempts failed. Please try again later.");
+                        loginAttempts = 3;
                     }
                 }
             }
