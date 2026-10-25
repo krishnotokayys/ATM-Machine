@@ -14,9 +14,8 @@ int main(){
     int loginAttempts = 3;
     int loggedin = 0;
     int apprunning = 1;
-    int runninglogin = 1;
 
-    while(apprunning){
+    while(apprunning == 1){
 
         //---------------------mainscreen------------------------------
         printf("\n\t\t#################################################\n");
@@ -228,7 +227,6 @@ int main(){
                             loggedin = 0;
                             loginAttempts = 3;
                             running = 0;
-                            apprunning = 0;
                             break;
 
                         case 6:
@@ -250,11 +248,12 @@ int main(){
         else if(letter == 'n'|| letter == 'N'){
             printf("\n\t\tExiting ATM Machine...\n");
             printf("\n\t\t>>PLEASE TAKE YOUR CARD<<\n");
-            printf("\t\tThank you.");
+            printf("\t\tThank you.\n");
             loggedin = 0;
             loginAttempts = 3;
             running = 0;
             apprunning = 0;
+            
         }
         else{
             printf("\n\t\t>>invalid option.<<");
