@@ -11,11 +11,13 @@ int main(){
     int receiverNumber;
     char letter = ' ';
 
+    int withdrawalSuccessful = 0;
     int correctPin = 1234;
     int pin;
     int loginAttempts = 3;
     int loggedin = 0;
     int apprunning = 1;
+    int loginmenu = 0;
     char cardDetected = ' ';
 
     while(apprunning == 1){
@@ -34,6 +36,7 @@ int main(){
         scanf(" %c", &cardDetected);
         if (cardDetected == 'y' || cardDetected == 'Y'){
             printf("\n\t\tCard inserted successfully.\n");
+            loginmenu = 1;
             Sleep(1500);
         }
         else if (cardDetected == 'n' || cardDetected == 'N'){
@@ -87,7 +90,7 @@ int main(){
         printf("\n\t\tLoading...");
         Sleep(300);
         system("cls");
-
+        while(loginmenu == 1){
         Sleep(150);
         printf("\n\t\t=-----------------------------------------------=\n");
         Sleep(150);
@@ -201,6 +204,8 @@ int main(){
                                     printf("\n\t\tYour new balance is: %.2f", balance);
                                     printf("\n\t\tYou have deposited successfully!");
                                     printf("\n\t\t===============================================");
+                                    printf("\n\t\tEnter any key to continue... ");
+                                    scanf(" %c", &letter);
                                 } else {
                                     printf("\n\t\tInvalid amount.");
                                 }
@@ -244,16 +249,22 @@ int main(){
                                 printf("\n\t\tYou have withdrawn: %.2f", withdrawAmount);
                                 printf("\n\t\tYour new balance is: %.2f\n", balance);
                                 printf("\t\t================================================\n");
+                                printf("\n\t\tEnter any key to continue...");
+                                scanf(" %c", &letter);
                                 printf("\n\t\tReturning to main menu...\n");
                                 Sleep(3000);
                                 system("cls");
                                 printf("\n\t\t>>Returned to main menu.\n");
+                                printf("\n\t\tYour current balance is: %.2f\n", balance);
+                                printf("\n\t\tPlease get your money. Thankyou..");
                             }
                             else if (withdrawAmount > balance){
                                 printf("\n\t\t===============================================");
                                 printf("\n\t\tInsufficient balance.");
                                 printf("\n\t\tYour current balance is: %.2f\n", balance);
                                 printf("\t\t================================================\n");
+                                printf("\n\t\tEnter any key to continue...");
+                                scanf(" %c", &letter);
                                 printf("\n\t\tReturning to main menu...\n");
                                 Sleep(3000);
                                 system("cls");
@@ -292,6 +303,9 @@ int main(){
                                     printf("\n\t\tYour new balance is: %.2f", balance);
                                     printf("\n\t\tYou have deposited successfully!");
                                     printf("\n\t\t================================================");
+                                    printf("\n\t\tEnter any key to continue...");
+                                    scanf(" %c", &letter);
+
                                 } else {
                                     printf("\n\t\tInvalid amount.");
                                 }
@@ -346,8 +360,12 @@ int main(){
                                     printf("\n\t\tYour new balance is: %.2f", balance);
                                     printf("\n\t\tYou have transfered successfully!");
                                     printf("\n\t\t================================================");
+                                    printf("\n\t\tEnter any key to continue...");
+                                    scanf(" %c", &letter);
                                 } else {
                                     printf("\n\t\tYou do not have enough balance to proccess this transaction...");
+                                    printf("\n\t\tEnter any key to continue...");
+                                    scanf(" %c", &letter);
                                 }
                                 printf("\n\t\tReturning to main menu...\n");
                                 Sleep(3000);
@@ -377,6 +395,7 @@ int main(){
                             loginAttempts = 3;
                             running = 0;
                             cardDetected = 0;
+                            loginmenu = 0;
                             break;
 
                         case 6:
@@ -424,14 +443,16 @@ int main(){
             running = 0;
             apprunning = 0;
             cardDetected = 0;
+            loginmenu = 0;
             Sleep(3000);
             system("cls");
         }
         else{
             printf("\n\t\t>>invalid option.<<");
-            Sleep(3000);
+            Sleep(1000);
             system("cls");
+                }
+            }
         }
     }
-}
 }
