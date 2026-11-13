@@ -53,43 +53,19 @@ int main(){
         Sleep(2000);
         printf("\n\t\tCard Detected.");
         Sleep(1500);
+        
+    for(int loading = 1; loading <= 6; loading++){
+        printf("\n\t\tLoading.");
+        Sleep(300);
+        system("cls");
+        printf("\n\t\tLoading..");
+        Sleep(300);
+        system("cls");
+        printf("\n\t\tLoading...");
+        Sleep(300);
+        system("cls");
+    }
 
-        printf("\n\t\tLoading.");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading..");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading...");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading.");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading..");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading...");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading.");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading..");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading...");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading.");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading..");
-        Sleep(300);
-        system("cls");
-        printf("\n\t\tLoading...");
-        Sleep(300);
-        system("cls");
         while(loginmenu == 1){
         Sleep(150);
         printf("\n\t\t=-----------------------------------------------=\n");
@@ -449,7 +425,7 @@ int main(){
         }
         else{
             printf("\n\t\t>>invalid option.<<");
-            Sleep(1000);
+            Sleep(800);
             system("cls");
                 }
             }
